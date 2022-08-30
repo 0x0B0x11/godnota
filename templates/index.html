@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Godnota
+{% endblock %}
+
+{% block container %}
+
+<table>
+  <caption>Борды</caption>
+  <thead></thead>
+  
+    {% for t in chan_list %}
+    <tbody>
+    <td><a href="http://{{ t[0] }}.i2p/">{{ t[0] }}</a>  <a href="{{ t[1] }}">[b32]</a></td>
+    <td>{{ t[2] }}</td>
+    </tbody>
+      {% endfor %}
+  
+</table>
+
+<table>
+  <caption>Общение</caption>
+  <thead></thead>
+  
+    {% for t in soc_list %}
+    <tbody>
+    <td><a href="http://{{ t[0] }}.i2p/">{{ t[0] }}</a>  <a href="{{ t[1] }}">[b32]</a></td>
+    <td>{{ t[2] }}</td>
+    </tbody>
+      {% endfor %}
+  
+</table>
+
+<table>
+  <caption>Техника</caption>
+  <thead></thead>
+  
+    {% for t in tech_list %}
+    <tbody>
+    <td><a href="http://{{ t[0] }}.i2p/">{{ t[0] }}</a>  <a href="{{ t[1] }}">[b32]</a></td>
+    <td>{{ t[2] }}</td>
+    </tbody>
+      {% endfor %}
+  
+</table>
+
+<table>
+  <caption>Файлы/архивы</caption>
+  <thead></thead>
+  
+    {% for t in file_list %}
+    <tbody>
+    <td><a href="http://{{ t[0] }}.i2p/">{{ t[0] }}</a>  <a href="{{ t[1] }}">[b32]</a></td>
+    <td>{{ t[2] }}</td>
+    </tbody>
+      {% endfor %}
+  
+</table>
+
+<table>
+  <caption>Сервисы</caption>
+  <thead></thead>
+  
+    {% for t in service_list %}
+    <tbody>
+    <td><a href="http://{{ t[0] }}.i2p/">{{ t[0] }}</a>  <a href="{{ t[1] }}">[b32]</a></td>
+    <td>{{ t[2] }}</td>
+    </tbody>
+      {% endfor %}
+  
+</table>
+
+<table>
+  <caption>Личные страницы</caption>
+  <thead></thead>
+  
+    {% for t in person_list %}
+    <tbody>
+    <td><a href="http://{{ t[0] }}.i2p/">{{ t[0] }}</a>  <a href="{{ t[1] }}">[b32]</a></td>
+    <td>{{ t[2] }}</td>
+    </tbody>
+      {% endfor %}
+  
+</table>
+
+<table>
+  <caption>Разное</caption>
+  <thead></thead>
+  
+    {% for t in sites_list %}
+    <tbody>
+    <td><a href="http://{{ t[0] }}.i2p/">{{ t[0] }}</a>  <a href="{{ t[1] }}">[b32]</a></td>
+    <td>{{ t[2] }}</td>
+    </tbody>
+      {% endfor %}
+  
+</table>
+
+<a href="/add"><p>Добавить сайт</p></a>
+
+{% endblock %}

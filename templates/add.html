@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Add new site
+{% endblock %}
+
+{% block container %}
+<article>
+<p><label>Добавление нового сайта</label></p>
+
+<form id="add" method="post">
+<p>
+    <label>Название</label>
+    <input name="name" required="" pattern="^(?!http://)\w+$(?!\.i2p/)" placeholder="Домен без http:// и .i2p">
+</p>
+
+<p>
+    <label>b32</label>
+    <input name="b32" required="" pattern="http://\w{52}\.b32\.i2p/" placeholder="http://xxxxxx.b32.i2p/">
+</p>
+<p>
+<label for="select">Выберите категорию</label>
+<select name="table" required="">
+    <option value="sites">Разное</option>
+    <option value="chan">Борды/chan</option>
+    <option value="soc">Общение</option>
+    <option value="tech">Техника</option>
+    <option value="file">Файлы/архивы</option>
+    <option value="service">Сервисы</option>
+    <option value="person">Личные страницы</option>
+</select>
+</p>
+<p>
+    <label>Описание</label>
+    <textarea rows="5" name="discription" required=""></textarea>
+</p>
+
+    <button>Добавить</button>
+</form>
+</article>
+{% endblock %}
+

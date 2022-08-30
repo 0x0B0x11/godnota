@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/simple.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+<body>
+  <header>
+    <a href="/"><h1>Godnota</h1></a>
+    <p>Welcome to Antarctic!</p>
+  </header>
+
+  <main>
+
+    {% block container %}
+    {% endblock %}
+
+  </main>
+
+  <footer>
+    <p>Mr. Pingw's website.</p>
+  </footer>
+</body>
+</html>
