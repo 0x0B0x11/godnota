@@ -1,0 +1,12 @@
+:root {
+    --bg: rgb(17, 56, 101);
+    --border: rgb(8, 148, 153);
+    --accent: #ecebe7;
+    --accent-bg: #0e456f;
+    --text: #e3e3e3;
+    --text-light: #d5d0d0;
+    --accent: #ffffff;
+    --code: #f06292;
+    --preformatted: #ccc;
+    --disabled: #111;
+  }
